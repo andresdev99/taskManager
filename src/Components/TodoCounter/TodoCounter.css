@@ -1,0 +1,14 @@
+.counter-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: rgb(65, 65, 65);
+    border-radius: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+}

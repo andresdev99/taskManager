@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    position: fixed; /* Usa una posición fija para centrar en relación con la ventana del navegador */
+    top: 50%; /* Coloca el centro del contenedor en el 50% verticalmente */
+    left: 50%; /* Coloca el centro del contenedor en el 50% horizontalmente */
+    transform: translate(-50%, -50%); /* Usa transform para ajustar el centro del contenedor */
+    height: 80%;
+    width: 60%;
+}

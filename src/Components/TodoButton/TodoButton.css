@@ -1,0 +1,8 @@
+button{
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(40, 43, 41);
+}

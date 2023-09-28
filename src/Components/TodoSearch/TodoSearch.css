@@ -1,0 +1,7 @@
+input{
+    width: 70%; /* Ancho del input (ajusta según tus necesidades) */
+    border: none; /* Elimina el borde predeterminado del input */
+    border-radius: 20px; /* Redondea los bordes del input */
+    padding: 10px; /* Añade espacio interior para el contenido (ajusta según tus necesidades) */
+    box-shadow: 0 4px 10px 5px #3bcf4280; /* Agrega un efecto de sombra difuminada roja */
+}

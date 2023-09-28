@@ -1,0 +1,62 @@
+li {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.task-info{
+    width: 100%;
+}
+
+.task-info:hover{
+    background: rgb(66, 66, 66);
+    border-radius: 10px 0 0 10px;
+}
+
+.delete-task{
+    display: flex;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.delete-task:hover{
+    background: rgb(179, 112, 112);
+}
+
+p {
+    text-align: center;
+    width: 100%;
+}
+
+span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    /* Ajusta la posición vertical para centrarlo */
+
+}
+
+.completed span {
+    color: greenyellow;
+}
+
+.completed p{
+    text-decoration: line-through;
+}
+
+.uncompleted span {
+    font-weight: bold;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+li.uncompleted:hover span {
+    color: red;
+}

@@ -5,7 +5,7 @@ const DeleteIcon = ({deleteTask}) => {
     return (
         <TodoIcon 
             type='delete-task'
-            color='trasnparent'
+            color='transparent'
             deleteTask={deleteTask}
         />
     )

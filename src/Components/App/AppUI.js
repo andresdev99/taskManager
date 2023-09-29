@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react'
+import { React, useContext } from 'react'
 import { TodoCounter } from '../TodoCounter/TodoCounter';
 import { TodoSearch } from '../TodoSearch/TodoSearch';
 import { TodoList } from '../TodoList/TodoList';
@@ -6,45 +6,43 @@ import { TodoItem } from '../TodoItem/TodoItem';
 import { CreateTodoButton } from '../TodoButton/TodoButton';
 import { LeftBar, RightBar } from '../Bars/Bars';
 import { Container } from '../Container/Container';
+import { TodosLoading } from '../TodosLoading/TodosLoading';
+import { TodosError } from '../TodosError/TodosError';
+import { TodosEmpty } from '../TodosEmpty/TodosEmpty';
+import { TodoContext } from '../TodoContext/TodoContext';
 
-const AppUI = ({
-    searchValue,
-    setSearchValue,
-    addNewTask,
-    completedTodos,
-    totalTodos,
-    searchTodos,
-    deleteTask,
-    completeTask
-}) => {
-    
+const AppUI = () => {
+    const {
+        loading,
+        error,
+        searchTodos,
+        completeTask,
+        deleteTask
+    } = useContext(TodoContext)
     return <>
         <Container>
             <LeftBar>
-                <TodoSearch
-                    searchValue={searchValue}
-                    setSearchValue={setSearchValue}
-                />
-                <CreateTodoButton addNewTask={addNewTask} />
+                <TodoSearch />
+                <CreateTodoButton />
             </LeftBar>
             <RightBar>
-                <TodoCounter
-                    completed={completedTodos}
-                    total={totalTodos}
-                />
-                <TodoList>
-                    {
-                        searchTodos.map(({ task, checked }, index) => (
-                            <TodoItem
-                                key={index}
-                                task={task}
-                                checked={checked}
-                                deleteTask={() => deleteTask(index)}
-                                completeTask={() => completeTask(index)}
-                            />
-                        ))
-                    }
-                </TodoList>
+                <TodoCounter />
+                    <TodoList>
+                        {loading && <TodosLoading />}
+                        {error && <TodosError />}
+                        {(!loading && searchTodos.length < 1) && <TodosEmpty />}
+                        {
+                            searchTodos.map(({ task, checked }, index) => (
+                                <TodoItem
+                                    key={index}
+                                    task={task}
+                                    checked={checked}
+                                    deleteTask={() => deleteTask(index)}
+                                    completeTask={() => completeTask(index)}
+                                />
+                            ))
+                        }
+                    </TodoList>
             </RightBar>
         </Container>
     </>

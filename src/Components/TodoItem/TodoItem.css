@@ -8,22 +8,22 @@ li {
 
 }
 
-.task-info{
+.task-info {
     width: 100%;
 }
 
-.task-info:hover{
+.task-info:hover {
     background: rgb(66, 66, 66);
     border-radius: 10px 0 0 10px;
 }
 
-.delete-task{
+.delete-task {
     display: flex;
     align-items: center;
     border-radius: 0 10px 10px 0;
 }
 
-.delete-task:hover{
+.delete-task:hover {
     background: rgb(179, 112, 112);
 }
 
@@ -32,7 +32,7 @@ p {
     width: 100%;
 }
 
-span {
+span.check {
     position: absolute;
     top: 0;
     right: 0;
@@ -41,22 +41,14 @@ span {
 
 }
 
-.completed span {
+.completed span.check {
     color: greenyellow;
 }
 
-.completed p{
+.completed p {
     text-decoration: line-through;
-}
-
-.uncompleted span {
-    font-weight: bold;
 }
 
 li:hover {
     cursor: pointer;
-}
-
-li.uncompleted:hover span {
-    color: red;
 }

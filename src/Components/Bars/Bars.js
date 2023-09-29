@@ -1,6 +1,5 @@
 import React from 'react'
 import './Bars.css'
-import cats from './cats.jpg';
 
 const LeftBar = ({ children }) => {
     return (

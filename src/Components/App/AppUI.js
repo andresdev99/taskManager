@@ -10,6 +10,8 @@ import { TodosLoading } from '../TodosLoading/TodosLoading';
 import { TodosError } from '../TodosError/TodosError';
 import { TodosEmpty } from '../TodosEmpty/TodosEmpty';
 import { TodoContext } from '../TodoContext/TodoContext';
+import { Modal } from '../Modal/Modal';
+import { ModalContent } from '../ModalContent/ModalContent';
 
 const AppUI = () => {
     const {
@@ -17,13 +19,18 @@ const AppUI = () => {
         error,
         searchTodos,
         completeTask,
-        deleteTask
+        deleteTask,
+        openModal
     } = useContext(TodoContext)
     return <>
         <Container>
             <LeftBar>
                 <TodoSearch />
-                <CreateTodoButton />
+                {openModal &&
+                    (<Modal>
+                        <ModalContent />
+                    </Modal>)
+                }
             </LeftBar>
             <RightBar>
                 <TodoCounter />
@@ -43,6 +50,8 @@ const AppUI = () => {
                             ))
                         }
                     </TodoList>
+                    <CreateTodoButton />
+
             </RightBar>
         </Container>
     </>

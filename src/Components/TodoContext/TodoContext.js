@@ -23,6 +23,8 @@ function TodoProvider({ children }) {
         []
     );
 
+    const [openModal, setOpenModal] = useState(false);
+
     // Todos Counter
     const completedTodos = todos.filter(todo => !!todo.checked).length;
     const totalTodos = todos.length
@@ -59,9 +61,9 @@ function TodoProvider({ children }) {
         }
     }
 
-    const addNewTask = () => {
+    const addNewTask = (newTaskName) => {
         // New Task info
-        const newTask = { task: searchValue, checked: false };
+        const newTask = { task: newTaskName, checked: false };
         // Creating new todos based on the last ones and adding the new one
         // setTodos([...todos, newTask]);
         saveTodo([...todos, newTask]);
@@ -79,7 +81,9 @@ function TodoProvider({ children }) {
             totalTodos,
             searchTodos,
             deleteTask,
-            completeTask
+            completeTask,
+            setOpenModal,
+            openModal
         }}>
             { children }
         </TodoContext.Provider>

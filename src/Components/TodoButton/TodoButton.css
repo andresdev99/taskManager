@@ -1,8 +1,14 @@
-button{
+button.add-task{
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    justify-content: center; /* Alinea horizontalmente el contenido al centro */
+    align-items: center;
     color: white;
     cursor: pointer;
     height: 30px;
     border-radius: 15px;
+    padding: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: rgb(40, 43, 41);
+    background: rgb(0,186,255);
+    border: none;
+    margin-bottom: 20px;
 }

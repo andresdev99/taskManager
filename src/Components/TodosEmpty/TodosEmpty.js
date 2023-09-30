@@ -2,9 +2,9 @@ import React from 'react'
 
 const TodosEmpty = () => {
   return (
-    <p>
+    <div>
       Empty...
-    </p>
+    </div>
   )
 }
 

@@ -1,0 +1,75 @@
+/* Estilos generales de la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Coloca el modal sobre otros elementos */
+}
+
+.modal-content {
+  background-color: #222; /* Color de fondo del modal */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra del modal */
+  color: #fff; /* Color del texto */
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+#taskName{
+  width: 90%;
+  
+  border: none; /* Elimina el borde predeterminado del input */
+  outline: none;
+  border-radius: 20px; /* Redondea los bordes del input */
+
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #333; /* Color de fondo del input */
+  color: #fff; /* Color del texto del input */
+}
+
+#taskName:focus {
+  outline: none; /* Elimina el borde por defecto */
+  box-shadow: 0 4px 10px 5px #3bcf4280; /* Agrega un efecto de sombra difuminada roja */
+
+}
+
+.modal-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button {
+  background-color: #ff3333; /* Color del botón "Close" */
+  border-radius: 20px; /* Redondea los bordes del input */
+
+  color: #fff; /* Color del texto del botón "Close" */
+}
+
+.save-button {
+  background-color: #33cc33; /* Color del botón "Save" */
+  color: #fff; /* Color del texto del botón "Save" */
+  border-radius: 20px; /* Redondea los bordes del input */
+
+}

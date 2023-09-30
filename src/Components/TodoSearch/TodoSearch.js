@@ -7,7 +7,8 @@ const TodoSearch = () => {
 
   return (
     <input
-      placeholder='Develop software'
+      placeholder='Filter Task'
+      id='filter-task'
       value={searchValue}
       onChange={(event) => {
         setSearchValue(event.target.value)
